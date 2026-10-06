@@ -7,7 +7,7 @@ on:
 jobs:
   label:
     name: Label Issues
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - name: Label Issues
         uses: dessant/label-actions@v4

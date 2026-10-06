@@ -11,7 +11,7 @@ on:
 jobs:
   codeql-analysis:
     name: CodeQL Analysis
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     permissions:
       actions: read
       contents: read
