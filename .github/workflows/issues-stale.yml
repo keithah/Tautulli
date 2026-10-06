@@ -7,7 +7,7 @@ on:
 jobs:
   stale:
     name: Check Issues / PRs
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - name: Stale
         uses: actions/stale@v9

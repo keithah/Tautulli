@@ -31,7 +31,7 @@ jobs:
 
   virus-total:
     name: VirusTotal Scan
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - name: Upload to VirusTotal
         uses: crazy-max/ghaction-virustotal@v4

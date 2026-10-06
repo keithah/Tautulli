@@ -104,7 +104,7 @@ jobs:
     name: VirusTotal Scan
     needs: build-installer
     if: needs.build-installer.result == 'success' && !contains(github.event.head_commit.message, '[skip ci]')
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - name: Download Installers
         if: needs.build-installer.result == 'success'
@@ -122,7 +122,7 @@ jobs:
     name: Release Installers
     needs: build-installer
     if: always() && startsWith(github.ref, 'refs/tags/') && !contains(github.event.head_commit.message, '[skip ci]')
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -167,7 +167,7 @@ jobs:
     name: Discord Notification
     needs: [build-installer, release]
     if: always() && !contains(github.event.head_commit.message, '[skip ci]')
-    runs-on: ubuntu-latest
+    runs-on: ubicloud-standard-2
     steps:
       - name: Post Status to Discord
         uses: sarisia/actions-status-discord@v1
